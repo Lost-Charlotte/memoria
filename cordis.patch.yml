@@ -1,0 +1,14 @@
+- insert:
+    - id: dsh-memoria
+      name: dsh-memoria
+      config:
+        # 档案根目录：档案挪盘 / 改名时只改这一行，不用碰代码。
+        # ⚠️ 不填就走默认（按顺序找）：GAI_DANG_ROOT → ~/.dsh/DeepSeek档案 → 桌面/DeepSeek档案
+        # archiveDir: 'C:\Users\你的用户名\DeepSeek档案'
+        # 入口文件（读序写在它里面，插件直接注入它的全文）
+        entryFile: '从这开始读.txt'
+        # 铁律所在目录 + 文件名关键词（按名字找，不写死完整路径）
+        tieDir: 'L1-必读'
+        tieNameHint: '铁律'
+        # full = 入口 + 铁律 + 作废清单；list = 只作废清单
+        injectMode: 'full'

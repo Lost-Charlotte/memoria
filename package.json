@@ -1,0 +1,44 @@
+{
+  "name": "dsh-memoria",
+  "version": "0.81.27",
+  "description": "梅莫莉亚（Memoria／メモリア）—— 「DeepSeek档案」的**管家**：对档案文件默认只读（在岗标记、扫出作废口径、检索、机械体检、算编号与落点、收工那刻拦住漏落档），对我是主动打下手；**写入只开一个入口（落笔半）**，且只走「改档工具」那扇唯一的门 —— 先快照、写完自检、出新错就自动回滚，内核不在就一个字都不写。零运行时依赖。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "anti-compaction",
+    "archive"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "assets/",
+    "tools/",
+    "cordis.patch.yml",
+    "README.md",
+    "INSTALL.md",
+    "使用说明-给人.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
